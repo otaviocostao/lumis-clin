@@ -1,0 +1,13 @@
+.header-content{
+    width: 100%;
+    padding: 3px;
+    box-sizing: border-box;
+    background-color: #ffff;
+    box-shadow: var(--box-shadow-default);
+    z-index: 100;
+}
+
+.header-content h2{
+    color: var(--font-color-blue);
+    margin-left: 20px;
+}
