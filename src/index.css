@@ -1,4 +1,24 @@
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
 
+  
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #f5f7fb;
+
+  --box-shadow-default: 0 2px 5px rgba(0, 0, 0, 0.099);
+  --font-color-blue: #0040ff;
+}
+
+
+body {
+  margin: 0;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
 }
