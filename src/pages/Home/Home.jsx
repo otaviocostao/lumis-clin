@@ -2,6 +2,7 @@ import React from 'react';
 import './Home.css'
 import Header from '../../components/Header/Header';
 import MenuLateral from '../../components/MenuLateral/MenuLateral';
+import DashboardContent from '../../components/DashboardContent/DashboardContent';
 
 function Home() {
 
@@ -10,6 +11,7 @@ function Home() {
       <Header />
       <div className='home-container'>
         <MenuLateral />
+        <DashboardContent />
       </div>
     </div>
   )
