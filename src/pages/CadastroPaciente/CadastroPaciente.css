@@ -1,0 +1,155 @@
+/* Importando ou definindo as variáveis globais (assumindo que estão no :root ou similar) */
+/* Se não estiverem globais, defina-as aqui ou importe o arquivo principal */
+/*
+:root {
+  --box-shadow-default: 0 2px 5px rgba(0, 0, 0, 0.099);
+  --font-color-blue: #0040ff;
+  --font-color-black: #020817;
+  --font-color-gray: #6b7280;
+  --default-border-radius: 10px;
+  --background-color-page: #f5f7fb;
+  --background-color-card: #ffffff;
+}
+*/
+
+/* Estilos gerais para a página de cadastro */
+.cadastro-paciente-page {
+    padding: 30px; /* Espaçamento interno */
+    /* background-color: var(--background-color-page); Já deve vir do layout principal */
+  }
+  
+  .page-title {
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--font-color-black);
+    margin-bottom: 25px;
+  }
+  
+  /* Estilos para o formulário */
+  .cadastro-paciente-form {
+    background-color: var(--background-color-card, #ffffff); /* Cor de fundo do cartão */
+    padding: 30px;
+    border-radius: var(--default-border-radius, 10px);
+    box-shadow: var(--box-shadow-default, 0 2px 5px rgba(0, 0, 0, 0.099));
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Espaço entre as seções */
+  }
+  
+  .form-section {
+    border-bottom: 1px solid #eee; /* Linha divisória leve entre seções */
+    padding-bottom: 25px;
+  }
+  
+  .form-section:last-of-type {
+    border-bottom: none; /* Remove a borda da última seção */
+    padding-bottom: 0;
+  }
+  
+  .form-section h2 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--font-color-black);
+    margin-bottom: 20px;
+    border-left: 4px solid var(--font-color-blue, #0040ff); /* Detalhe visual */
+    padding-left: 10px;
+  }
+  
+  /* Layout das linhas do formulário */
+  .form-row {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha em telas menores */
+    gap: 20px; /* Espaço entre os campos na mesma linha */
+    margin-bottom: 15px; /* Espaço abaixo de cada linha */
+  }
+  
+  /* Grupo de label + input */
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Faz com que os grupos tentem ocupar espaço igual */
+    min-width: 180px; /* Largura mínima para evitar que fiquem muito estreitos */
+  }
+  
+  /* Ajustes específicos de largura */
+  .form-group.full-width {
+      flex-basis: 100%; /* Ocupa a largura inteira da linha */
+  }
+  .form-group.cep { flex-basis: 120px; flex-grow: 0;}
+  .form-group.rua { flex-grow: 2; } /* Rua ocupa mais espaço */
+  .form-group.numero { flex-basis: 100px; flex-grow: 0;}
+  .form-group.estado { flex-basis: 100px; flex-grow: 0;}
+  
+  
+  .form-group label {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--font-color-gray, #6b7280);
+  }
+  
+  .form-group input[type="text"],
+  .form-group input[type="date"],
+  .form-group input[type="email"],
+  .form-group input[type="tel"],
+  .form-group select {
+    padding: 10px 12px;
+    border: 1px solid #d1d5db; /* Cinza claro para borda */
+    border-radius: var(--default-border-radius, 10px);
+    font-size: 1rem;
+    color: var(--font-color-black, #020817);
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+  
+  .form-group input:focus,
+  .form-group select:focus {
+    outline: none;
+    border-color: var(--font-color-blue, #0040ff);
+    box-shadow: 0 0 0 2px rgba(0, 64, 255, 0.2); /* Sombra de foco sutil */
+  }
+  
+  .form-group select {
+      appearance: none; /* Remove estilo padrão do select */
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3E%3C/svg%3E"); /* Adiciona seta customizada */
+      background-position: right 0.7em top 50%;
+      background-repeat: no-repeat;
+      background-size: 0.9em;
+      padding-right: 2.5em; /* Espaço para a seta */
+  }
+  
+  /* Ações do formulário (botões) */
+  .form-actions {
+    display: flex;
+    justify-content: flex-end; /* Alinha botões à direita */
+    gap: 15px; /* Espaço entre os botões */
+    padding-top: 20px;
+  }
+  
+  .form-actions button {
+    padding: 10px 25px;
+    border: none;
+    border-radius: var(--default-border-radius, 10px);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .submit-button {
+    background-color: var(--font-color-blue, #0040ff);
+    color: white;
+  }
+  
+  .submit-button:hover {
+    background-color: #0033cc; /* Azul um pouco mais escuro no hover */
+    box-shadow: 0 2px 8px rgba(0, 64, 255, 0.3);
+  }
+  
+  .cancel-button {
+    background-color: #e5e7eb; /* Cinza claro */
+    color: var(--font-color-gray, #6b7280);
+  }
+  
+  .cancel-button:hover {
+    background-color: #d1d5db; /* Cinza um pouco mais escuro no hover */
+  }
