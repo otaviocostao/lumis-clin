@@ -1,14 +1,12 @@
 .home-area{
     width: 100%;
+    min-height: 100vh;
     display: flex;
-    align-items: start;
-    justify-content: center;
     flex-direction: column;
 }
 
 .home-container{
     width: 100%;
     display: flex;
-    justify-content: start;
-    align-items: start;
+    flex-grow: 1;
 }
