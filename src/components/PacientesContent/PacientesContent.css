@@ -1,0 +1,138 @@
+
+.pacientes-page {
+    width: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+  }
+  
+  .page-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--font-color-black);
+    margin-bottom: 25px;
+  }
+  
+  /* Barra de Ações (Busca e Botão Adicionar) */
+  .pacientes-actions {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    flex-wrap: wrap; /* Para responsividade */
+    gap: 15px;
+  }
+  
+  .search-input {
+    width: 50%;
+    padding: 10px 15px;
+    border: 1px solid #d1d5db;
+    border-radius: var(--default-border-radius, 10px);
+    font-size: 0.95rem;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+  
+  .search-input:focus {
+    outline: none;
+    border-color: var(--font-color-blue, #0040ff);
+    box-shadow: 0 0 0 2px rgba(0, 64, 255, 0.2);
+  }
+  
+  .add-button {
+    padding: 10px 20px;
+    background-color: var(--font-color-blue);
+    color: white;
+    border: none;
+    border-radius: var(--default-border-radius, 10px);
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Espaço entre o '+' e o texto */
+  }
+  
+  .add-button:hover {
+    background-color: #0033cc;
+  }
+  
+  /* Container da Tabela */
+  .pacientes-table-container {
+    background-color: var(--background-color-card, #ffffff);
+    border-radius: var(--default-border-radius, 10px);
+    box-shadow: var(--box-shadow-default, 0 2px 5px rgba(0, 0, 0, 0.099));
+    overflow-x: auto; /* Adiciona scroll horizontal se a tabela for muito larga */
+  }
+  
+  /* Tabela de Pacientes */
+  .pacientes-table {
+    width: 100%;
+    border-collapse: collapse; /* Remove espaços entre células */
+  }
+  
+  .pacientes-table th,
+  .pacientes-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee; /* Linha separadora entre linhas */
+    font-size: 0.9rem;
+    color: var(--font-color-black);
+  }
+  
+  .pacientes-table th {
+    background-color: #f9fafb; /* Fundo levemente cinza para cabeçalho */
+    font-weight: 600;
+    color: var(--font-color-gray);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .pacientes-table tbody tr:last-child td {
+    border-bottom: none; /* Remove a borda da última linha */
+  }
+  
+  .pacientes-table tbody tr:hover {
+    background-color: #f5f7fb; /* Efeito hover sutil */
+  }
+  
+  /* Célula de Ações */
+  .actions-cell {
+    display: flex;
+    gap: 10px; /* Espaço entre os botões de ação */
+    align-items: center;
+  }
+  
+  .action-button {
+    background: none;
+    border: none;
+    padding: 5px; /* Pequeno padding para área de clique */
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  
+  .action-button.edit-button {
+    color: var(--font-color-blue, #0040ff);
+  }
+  .action-button.edit-button:hover {
+    background-color: rgba(0, 64, 255, 0.1); /* Fundo azul claro no hover */
+  }
+  
+  .action-button.delete-button {
+    color: #ef4444; /* Cor vermelha para exclusão */
+  }
+  .action-button.delete-button:hover {
+    background-color: rgba(239, 68, 68, 0.1); /* Fundo vermelho claro no hover */
+  }
+  
+  /* Mensagem de Nenhum Resultado */
+  .no-results {
+      text-align: center;
+      padding: 40px 15px;
+      color: var(--font-color-gray);
+      font-style: italic;
+  }

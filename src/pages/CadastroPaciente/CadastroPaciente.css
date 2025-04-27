@@ -1,21 +1,19 @@
-/* Importando ou definindo as variáveis globais (assumindo que estão no :root ou similar) */
-/* Se não estiverem globais, defina-as aqui ou importe o arquivo principal */
-/*
-:root {
-  --box-shadow-default: 0 2px 5px rgba(0, 0, 0, 0.099);
-  --font-color-blue: #0040ff;
-  --font-color-black: #020817;
-  --font-color-gray: #6b7280;
-  --default-border-radius: 10px;
-  --background-color-page: #f5f7fb;
-  --background-color-card: #ffffff;
+.cadastro-paciente-area{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
-*/
 
-/* Estilos gerais para a página de cadastro */
+.cadastro-paciente-container{
+    width: 100%;
+    display: flex;
+    flex-grow: 1;
+}
+
 .cadastro-paciente-page {
-    padding: 30px; /* Espaçamento interno */
-    /* background-color: var(--background-color-page); Já deve vir do layout principal */
+    padding: 30px;
+    width: 100%;
   }
   
   .page-title {
